@@ -68,7 +68,7 @@ if (isset($license->errors)) {
 // If the license is invalid, exit early, *unless* the license is only
 // invalid because it does not have any machine activations yet.
 if (!$license->meta->valid) {
-  switch ($license->meta->constant) {
+  switch ($license->meta->code) {
     case 'FINGERPRINT_SCOPE_MISMATCH': // Allow more than 1 activation if our license isn't node-locked
     case 'NO_MACHINES':
     case 'NO_MACHINE': {
